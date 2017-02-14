@@ -17,7 +17,6 @@ class callFlowViewController: UIViewController {
     @IBOutlet weak var CDFNode: UIButton!
     
     @IBOutlet weak var labelOne: UILabel!
-    
     @IBOutlet weak var labelTwo: UILabel!
     
     override func viewDidLoad() {
@@ -37,14 +36,17 @@ class callFlowViewController: UIViewController {
             labelOne.text = "INVITE"
             labelOne.isHidden = false
             originatingMtas.isHidden = false
-        } else if (sender.direction == .left) {
-            labelTwo.text = "NO RECIPIENT!"
+        }  else if (sender.direction == .left) {
+            labelTwo.text = "NO RECIPIENT"
             labelTwo.isHidden = false
         }
     }
     
     @IBAction func mtasMessages(_ sender: UISwipeGestureRecognizer) {
-        
+        if (sender.direction == .left) {
+            labelTwo.text = "200 OK"
+            labelTwo.isHidden = false
+        }
     }
 
 }

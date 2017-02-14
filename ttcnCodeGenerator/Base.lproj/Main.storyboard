@@ -37,20 +37,23 @@
                                         <state key="normal" title="Button" image="UE-A"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="5U2-kW-K48" appends="YES" id="ld3-R9-3jN"/>
+                                            <outletCollection property="gestureRecognizers" destination="d1j-gv-kxz" appends="YES" id="u3k-88-El2"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iY-ix-nyy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelOne" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iY-ix-nyy">
                                 <rect key="frame" x="28" y="169" width="186" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="bke-4e-GQN"/>
+                                    <constraint firstAttribute="height" constant="43" id="svn-Wj-pTN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-ax-fqa">
-                                <rect key="frame" x="28" y="220" width="186" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelTwo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-ax-fqa">
+                                <rect key="frame" x="28" y="220" width="186" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,10 +74,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnk-Jd-7pr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnk-Jd-7pr">
                                 <rect key="frame" x="159" y="28" width="83" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="4fG-Td-3id"/>
+                                </constraints>
                                 <state key="normal" title="oMTAS" image="MTAS"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Ri0-qX-y9g" appends="YES" id="bnK-Pm-Qzz"/>
@@ -83,10 +88,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="aaM-ax-fqa" firstAttribute="leading" secondItem="0iY-ix-nyy" secondAttribute="leading" id="0au-8O-iTr"/>
+                            <constraint firstItem="aaM-ax-fqa" firstAttribute="top" secondItem="0iY-ix-nyy" secondAttribute="bottom" constant="8" symbolic="YES" id="0eS-1y-X3N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="u0t-nZ-fx2" secondAttribute="trailing" id="D3l-7h-Emd"/>
+                            <constraint firstItem="0iY-ix-nyy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="169" id="Lex-7h-p6s"/>
                             <constraint firstItem="yUj-cs-dpW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="ZPP-Cy-cWi"/>
+                            <constraint firstItem="aaM-ax-fqa" firstAttribute="trailing" secondItem="0iY-ix-nyy" secondAttribute="trailing" id="fSe-lS-nxb"/>
+                            <constraint firstItem="0iY-ix-nyy" firstAttribute="top" secondItem="Lnk-Jd-7pr" secondAttribute="bottom" constant="22" id="iXg-w3-jM6"/>
                             <constraint firstItem="yUj-cs-dpW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="mhs-5C-nB0"/>
                             <constraint firstItem="u0t-nZ-fx2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pBT-bS-XSf"/>
+                            <constraint firstItem="0iY-ix-nyy" firstAttribute="leading" secondItem="yUj-cs-dpW" secondAttribute="leading" id="vVU-6b-eFr"/>
+                            <constraint firstItem="Lnk-Jd-7pr" firstAttribute="leading" secondItem="yUj-cs-dpW" secondAttribute="trailing" constant="24" id="z6z-ca-wes"/>
                         </constraints>
                     </view>
                     <connections>
@@ -103,13 +115,18 @@
                         <action selector="sipMessage:" destination="BYZ-38-t0r" id="ZQi-ud-SJ1"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="Ri0-qX-y9g">
+                <swipeGestureRecognizer direction="left" id="Ri0-qX-y9g">
                     <connections>
                         <action selector="mtasMessages:" destination="BYZ-38-t0r" id="vQl-uF-esi"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="d1j-gv-kxz">
+                    <connections>
+                        <action selector="sipMessage:" destination="BYZ-38-t0r" id="RKu-Tu-fBW"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1003.1249999999999" y="-402.34375"/>
+            <point key="canvasLocation" x="-774" y="-444"/>
         </scene>
     </scenes>
     <resources>
