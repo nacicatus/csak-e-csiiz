@@ -6,8 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,103 +22,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNr-l8-Pad">
-                                <rect key="frame" x="20" y="65" width="55" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="7fh-5o-2Zg"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="UE-A"/>
-                                <connections>
-                                    <action selector="sendSip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LYn-Yi-aGI"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2r-7b-9hF">
-                                <rect key="frame" x="20" y="28" width="55" height="21"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="yUj-cs-dpW">
+                                <rect key="frame" x="28" y="28" width="107" height="116.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2r-7b-9hF">
+                                        <rect key="frame" x="0.0" y="0.0" width="37.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNr-l8-Pad">
+                                        <rect key="frame" x="0.0" y="20.5" width="107" height="96"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal" title="Button" image="UE-A"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="5U2-kW-K48" appends="YES" id="ld3-R9-3jN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iY-ix-nyy">
+                                <rect key="frame" x="28" y="169" width="186" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zch-q5-MlV">
-                                <rect key="frame" x="257" y="65" width="74" height="110"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="74" id="tjC-3R-4sr"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="MTAS"/>
-                                <connections>
-                                    <action selector="sendSip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rpR-De-liL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tv-8Y-MHK">
-                                <rect key="frame" x="485" y="65" width="74" height="110"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="74" id="y5e-yi-jPh"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="HSS"/>
-                                <connections>
-                                    <action selector="sendSip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mK0-y8-ULs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ew-SB-RE3">
-                                <rect key="frame" x="949" y="65" width="55" height="110"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="SWg-DX-IeJ"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="UE-A"/>
-                                <connections>
-                                    <action selector="sendSip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NHY-yN-c0V"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bob" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2z-cY-Iy4">
-                                <rect key="frame" x="949" y="36" width="55" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-ax-fqa">
+                                <rect key="frame" x="28" y="220" width="186" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rnk-c1-EfQ">
-                                <rect key="frame" x="715" y="65" width="74" height="110"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="74" id="XsP-T8-a6B"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="CDF"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="u0t-nZ-fx2">
+                                <rect key="frame" x="897" y="28" width="107" height="116.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bob" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pc-zO-bF9">
+                                        <rect key="frame" x="0.0" y="0.0" width="30.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1t-2f-ExT">
+                                        <rect key="frame" x="0.0" y="20.5" width="107" height="96"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal" title="Button" image="UE-A"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnk-Jd-7pr">
+                                <rect key="frame" x="159" y="28" width="83" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="oMTAS" image="MTAS"/>
                                 <connections>
-                                    <action selector="sendSip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PKS-B9-7Ay"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ri0-qX-y9g" appends="YES" id="bnK-Pm-Qzz"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1tv-8Y-MHK" firstAttribute="bottom" secondItem="Rnk-c1-EfQ" secondAttribute="bottom" id="0lw-pl-qGU"/>
-                            <constraint firstItem="0ew-SB-RE3" firstAttribute="baseline" secondItem="RNr-l8-Pad" secondAttribute="baseline" id="5j1-l6-AqX"/>
-                            <constraint firstAttribute="trailing" secondItem="Rnk-c1-EfQ" secondAttribute="trailing" constant="235" id="FQb-9S-ix5"/>
-                            <constraint firstItem="Rnk-c1-EfQ" firstAttribute="top" secondItem="0ew-SB-RE3" secondAttribute="top" id="G0y-1V-r2y"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rnk-c1-EfQ" secondAttribute="bottom" constant="593" id="GIz-sv-odr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0ew-SB-RE3" secondAttribute="trailing" id="HSr-sD-csu"/>
-                            <constraint firstItem="R2z-cY-Iy4" firstAttribute="leading" secondItem="0ew-SB-RE3" secondAttribute="leading" id="M4S-cE-Lqs"/>
-                            <constraint firstItem="1tv-8Y-MHK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="485" id="Mef-Yr-Flx"/>
-                            <constraint firstItem="Zch-q5-MlV" firstAttribute="baseline" secondItem="1tv-8Y-MHK" secondAttribute="baseline" id="YVG-16-CBf"/>
-                            <constraint firstItem="1tv-8Y-MHK" firstAttribute="firstBaseline" secondItem="0ew-SB-RE3" secondAttribute="baseline" id="aqq-gl-lYq"/>
-                            <constraint firstItem="1tv-8Y-MHK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="dz4-GF-7ve"/>
-                            <constraint firstItem="R2z-cY-Iy4" firstAttribute="trailing" secondItem="0ew-SB-RE3" secondAttribute="trailing" id="g08-Xx-ehe"/>
-                            <constraint firstItem="0ew-SB-RE3" firstAttribute="top" secondItem="R2z-cY-Iy4" secondAttribute="bottom" constant="8" symbolic="YES" id="iy0-DL-7ze"/>
-                            <constraint firstItem="Zch-q5-MlV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="257" id="nvM-06-oex"/>
-                            <constraint firstItem="Zch-q5-MlV" firstAttribute="top" secondItem="1tv-8Y-MHK" secondAttribute="top" id="oYc-52-3dT"/>
-                            <constraint firstItem="Zch-q5-MlV" firstAttribute="bottom" secondItem="0ew-SB-RE3" secondAttribute="bottom" id="qqZ-1l-haB"/>
-                            <constraint firstItem="Rnk-c1-EfQ" firstAttribute="top" secondItem="RNr-l8-Pad" secondAttribute="top" id="syl-EO-43T"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="RNr-l8-Pad" secondAttribute="leading" id="tUz-Kq-ZhZ"/>
-                            <constraint firstItem="Zch-q5-MlV" firstAttribute="firstBaseline" secondItem="1tv-8Y-MHK" secondAttribute="firstBaseline" id="wex-Vc-u74"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u0t-nZ-fx2" secondAttribute="trailing" id="D3l-7h-Emd"/>
+                            <constraint firstItem="yUj-cs-dpW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="ZPP-Cy-cWi"/>
+                            <constraint firstItem="yUj-cs-dpW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="mhs-5C-nB0"/>
+                            <constraint firstItem="u0t-nZ-fx2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pBT-bS-XSf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelOne" destination="0iY-ix-nyy" id="44S-CV-9Mg"/>
+                        <outlet property="labelTwo" destination="aaM-ax-fqa" id="Ox9-EE-IXL"/>
+                        <outlet property="originatingMtas" destination="Lnk-Jd-7pr" id="v4I-C6-xQ8"/>
+                        <outlet property="userA" destination="RNr-l8-Pad" id="r3I-dJ-QXL"/>
+                        <outlet property="userB" destination="f1t-2f-ExT" id="TvE-0C-vEI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="5U2-kW-K48">
+                    <connections>
+                        <action selector="sipMessage:" destination="BYZ-38-t0r" id="ZQi-ud-SJ1"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Ri0-qX-y9g">
+                    <connections>
+                        <action selector="mtasMessages:" destination="BYZ-38-t0r" id="vQl-uF-esi"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-536" y="-98"/>
+            <point key="canvasLocation" x="-1003.1249999999999" y="-402.34375"/>
         </scene>
     </scenes>
     <resources>
-        <image name="CDF" width="74" height="110"/>
-        <image name="HSS" width="108" height="159"/>
-        <image name="MTAS" width="165" height="237"/>
+        <image name="MTAS" width="83" height="119"/>
         <image name="UE-A" width="53" height="96"/>
     </resources>
 </document>
