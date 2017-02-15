@@ -13,6 +13,7 @@
 		307F19AC1E5218C100A423A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 307F19AB1E5218C100A423A7 /* Assets.xcassets */; };
 		307F19AF1E5218C100A423A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 307F19AD1E5218C100A423A7 /* LaunchScreen.storyboard */; };
 		307F19B71E521C1C00A423A7 /* SIPfunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F19B61E521C1C00A423A7 /* SIPfunctions.swift */; };
+		30E6A2E61E54BC12003D6777 /* TCCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E6A2E51E54BC12003D6777 /* TCCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		307F19AE1E5218C100A423A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		307F19B01E5218C100A423A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		307F19B61E521C1C00A423A7 /* SIPfunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIPfunctions.swift; sourceTree = "<group>"; };
+		30E6A2E51E54BC12003D6777 /* TCCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				307F19A41E5218C100A423A7 /* AppDelegate.swift */,
 				307F19A61E5218C100A423A7 /* callFlowViewController.swift */,
+				30E6A2E51E54BC12003D6777 /* TCCode.swift */,
 				307F19A81E5218C100A423A7 /* Main.storyboard */,
 				307F19B61E521C1C00A423A7 /* SIPfunctions.swift */,
 				307F19AB1E5218C100A423A7 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				307F19A71E5218C100A423A7 /* callFlowViewController.swift in Sources */,
+				30E6A2E61E54BC12003D6777 /* TCCode.swift in Sources */,
 				307F19A51E5218C100A423A7 /* AppDelegate.swift in Sources */,
 				307F19B71E521C1C00A423A7 /* SIPfunctions.swift in Sources */,
 			);
@@ -303,6 +307,7 @@
 				307F19B51E5218C100A423A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
