@@ -42,12 +42,14 @@ class TopChoiceTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NodeCell", for: indexPath)
         cell.textLabel!.text = nodeData[indexPath.row]
+        let iconName: String = nodeData[indexPath.row]
+        cell.imageView!.image = UIImage.init(named: iconName)
         
-        if (cell.accessoryType == .checkmark) {
-            cell.accessoryType = .none;
-        } else {
-            cell.accessoryType = .checkmark;
-        }
+//        if (cell.accessoryType == .checkmark) {
+//            cell.accessoryType = .none;
+//        } else {
+//            cell.accessoryType = .checkmark;
+//        }
         
         return cell
     }
@@ -67,13 +69,20 @@ class TopChoiceTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NodeCell", for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "NodeCell", for: indexPath)
 
-        if (cell.accessoryType == .checkmark) {
-            cell.accessoryType = .none;
-        } else {
-            cell.accessoryType = .checkmark;
-        }
+//        if (cell.accessoryType == .checkmark) {
+//            cell.accessoryType = .none;
+//        } else {
+//            cell.accessoryType = .checkmark;
+//        }
+        
+        let destinationName = nodeData[indexPath.row]
+        //        print(destinationName)
+        let destinationVC = storyboard!.instantiateViewController(withIdentifier: destinationName) as UIViewController
+        self.navigationController?.pushViewController(destinationVC, animated: true)
+        
+
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

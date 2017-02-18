@@ -5,10 +5,10 @@
 	<key>TelecomNode</key>
 	<array>
 		<string>User_Alice</string>
-		<string>originating MTAS</string>
-		<string>Home Subscriber Server</string>
-		<string>terminating MTAS</string>
-		<string>Charging Data Function</string>
+		<string>MTAS</string>
+		<string>HSS</string>
+		<string>MTAS</string>
+		<string>CDF</string>
 		<string>User_Bob</string>
 	</array>
 </dict>
