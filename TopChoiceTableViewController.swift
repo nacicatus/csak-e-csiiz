@@ -14,12 +14,12 @@ class TopChoiceTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = true
         let path = Bundle.main.path(forResource: "NodeData", ofType: "plist")
         let nodeDictionary = NSDictionary(contentsOfFile: path!)
         nodeData = nodeDictionary!.object(forKey: "TelecomNode") as! [String]
         
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
+//        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,33 +42,47 @@ class TopChoiceTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NodeCell", for: indexPath)
         cell.textLabel!.text = nodeData[indexPath.row]
-
+        
+        if (cell.accessoryType == .checkmark) {
+            cell.accessoryType = .none;
+        } else {
+            cell.accessoryType = .checkmark;
+        }
+        
         return cell
     }
     
-
+    /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
     }
-    
-
-    
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
- 
+    */
 
-    /*
+    
     // MARK: - Navigation
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NodeCell", for: indexPath)
+
+        if (cell.accessoryType == .checkmark) {
+            cell.accessoryType = .none;
+        } else {
+            cell.accessoryType = .checkmark;
+        }
+    }
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
