@@ -14,6 +14,8 @@
 		307F19AF1E5218C100A423A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 307F19AD1E5218C100A423A7 /* LaunchScreen.storyboard */; };
 		307F19B71E521C1C00A423A7 /* SIPfunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F19B61E521C1C00A423A7 /* SIPfunctions.swift */; };
 		30E6A2E61E54BC12003D6777 /* TCCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E6A2E51E54BC12003D6777 /* TCCode.swift */; };
+		F8CB15DC1E58923200B660A0 /* TopChoiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CB15DB1E58923200B660A0 /* TopChoiceTableViewController.swift */; };
+		F8CB15DE1E5896D500B660A0 /* NodeData.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8CB15DD1E5896D500B660A0 /* NodeData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		307F19B01E5218C100A423A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		307F19B61E521C1C00A423A7 /* SIPfunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIPfunctions.swift; sourceTree = "<group>"; };
 		30E6A2E51E54BC12003D6777 /* TCCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCode.swift; sourceTree = "<group>"; };
+		F8CB15DB1E58923200B660A0 /* TopChoiceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopChoiceTableViewController.swift; path = ../TopChoiceTableViewController.swift; sourceTree = "<group>"; };
+		F8CB15DD1E5896D500B660A0 /* NodeData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NodeData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +65,13 @@
 				307F19A41E5218C100A423A7 /* AppDelegate.swift */,
 				307F19A61E5218C100A423A7 /* callFlowViewController.swift */,
 				30E6A2E51E54BC12003D6777 /* TCCode.swift */,
+				F8CB15DB1E58923200B660A0 /* TopChoiceTableViewController.swift */,
 				307F19A81E5218C100A423A7 /* Main.storyboard */,
 				307F19B61E521C1C00A423A7 /* SIPfunctions.swift */,
 				307F19AB1E5218C100A423A7 /* Assets.xcassets */,
 				307F19AD1E5218C100A423A7 /* LaunchScreen.storyboard */,
 				307F19B01E5218C100A423A7 /* Info.plist */,
+				F8CB15DD1E5896D500B660A0 /* NodeData.plist */,
 			);
 			path = ttcnCodeGenerator;
 			sourceTree = "<group>";
@@ -129,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CB15DE1E5896D500B660A0 /* NodeData.plist in Resources */,
 				307F19AF1E5218C100A423A7 /* LaunchScreen.storyboard in Resources */,
 				307F19AC1E5218C100A423A7 /* Assets.xcassets in Resources */,
 				307F19AA1E5218C100A423A7 /* Main.storyboard in Resources */,
@@ -144,6 +151,7 @@
 			files = (
 				307F19A71E5218C100A423A7 /* callFlowViewController.swift in Sources */,
 				30E6A2E61E54BC12003D6777 /* TCCode.swift in Sources */,
+				F8CB15DC1E58923200B660A0 /* TopChoiceTableViewController.swift in Sources */,
 				307F19A51E5218C100A423A7 /* AppDelegate.swift in Sources */,
 				307F19B71E521C1C00A423A7 /* SIPfunctions.swift in Sources */,
 			);
