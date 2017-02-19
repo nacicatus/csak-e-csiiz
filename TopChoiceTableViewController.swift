@@ -10,11 +10,17 @@ import UIKit
 
 class TopChoiceTableViewController: UITableViewController {
     
+    // Create an array of strings to populate the table from a source plist
     var nodeData = [String]()
+    
+    // Create another array to store the chosen nodes
+    var chosenNode = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.clearsSelectionOnViewWillAppear = true
+        self.tableView.allowsMultipleSelection = true
+        
+//        self.clearsSelectionOnViewWillAppear = false
         let path = Bundle.main.path(forResource: "NodeData", ofType: "plist")
         let nodeDictionary = NSDictionary(contentsOfFile: path!)
         nodeData = nodeDictionary!.object(forKey: "TelecomNode") as! [String]
@@ -44,13 +50,8 @@ class TopChoiceTableViewController: UITableViewController {
         cell.textLabel!.text = nodeData[indexPath.row]
         let iconName: String = nodeData[indexPath.row]
         cell.imageView!.image = UIImage.init(named: iconName)
-        
-//        if (cell.accessoryType == .checkmark) {
-//            cell.accessoryType = .none;
-//        } else {
-//            cell.accessoryType = .checkmark;
-//        }
-        
+        cell.accessoryType = .none;
+
         return cell
     }
     
@@ -69,28 +70,31 @@ class TopChoiceTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "NodeCell", for: indexPath)
-
-//        if (cell.accessoryType == .checkmark) {
-//            cell.accessoryType = .none;
-//        } else {
-//            cell.accessoryType = .checkmark;
-//        }
+        
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.accessoryType = .checkmark
+        chosenNode.append((cell?.textLabel?.text)!)
         
         let destinationName = nodeData[indexPath.row]
-        //        print(destinationName)
         let destinationVC = storyboard!.instantiateViewController(withIdentifier: destinationName) as UIViewController
         self.navigationController?.pushViewController(destinationVC, animated: true)
         
 
     }
     
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        if (cell?.accessoryType == .checkmark) {
+            cell?.accessoryType = .none
+        }
+        self.tableView.deselectRow(at: indexPath, animated: true)   
+    }
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+       
     }
     
 
